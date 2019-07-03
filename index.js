@@ -3,7 +3,9 @@ function RenderAsNestedList({
   labelProp = 'id',
   labelClass = 'label',
   listClass = 'list',
-  valueClass = 'value'
+  valueClass = 'value',
+  arrayClass = 'array',
+  objectClass = 'object'
 }) {
   return renderAsNestedList;
 
@@ -19,6 +21,11 @@ function RenderAsNestedList({
     if (thing && type === 'object') {
       let proptree = append(item, 'ul');
       proptree.classList.add(listClass);
+      if (Array.isArray(thing)) {
+        proptree.classList.add(arrayClass);
+      } else {
+        proptree.classList.add(objectClass);
+      }
       if (Array.isArray(thing) && thing.length < 1) {
         renderAsNestedList({ targetListEl: proptree, thing: '<empty array>' });
       } else {
