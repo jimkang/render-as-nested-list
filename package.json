@@ -1,6 +1,6 @@
 {
   "name": "render-as-nested-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Function for rendering an arbitrarily deep object as a hierarchy of `<ul>` and `<li>` elements that you can style with CSS to look however you like.",
   "main": "index.js",
   "scripts": {
