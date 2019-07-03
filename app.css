@@ -1,0 +1,58 @@
+body {
+  font-size: 24pt;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #666;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a:link {
+  color: #444;
+  font-weight: bold;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s;
+  display: none;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+#main-content {
+  max-width: 100%;
+}
+
+.label:after {
+  content: " →";
+}
+
+.label {
+  margin: 0.5em;
+  background-color: #ff8;
+}
+
+.value {
+  font-weight: bold;
+}
+
+#status-message {
+  background-color: #ffffee;
+  margin: 1em;
+  padding: 1em;
+}
+
+@media all and (max-height: 568px) {
+  body {
+    font-size: 18px;
+  }
+}
+
